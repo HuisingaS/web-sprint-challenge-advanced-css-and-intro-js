@@ -230,10 +230,10 @@ console.log(artists);
 */
 
 function getArtistsByIndex(artists, index) {
-  const artist = artists[index]
+  const artist = artists[index];
   return `The Artist at index ${index} is ${artist.name}`
 }
-console.log(getArtistsByIndex(artists, 0))
+console.log(getArtistsByIndex(artists, 0));
 
 
 
@@ -292,8 +292,7 @@ artists.push(
   genre:'Web Design', 
   nationality:'American (Heritage: Swedish, Dutch, Norwegian', bio:'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.'
 });
-
-console.log(artists)
+console.log(artists);
 
 
 
@@ -305,9 +304,14 @@ and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
-function lotsOfArt(artists){
-  artists.filter(item.paintings >= 100);
-}
+function lotsOfArt(arr){
+  const selectArtists = [];
+  for(i= 0; i< arr.length; i++){
+    if(arr[i].paintings > 100){
+      selectArtists.push(arr[i].name);
+    } 
+  } return selectArtists;
+} 
 console.log(lotsOfArt(artists));
 
 
